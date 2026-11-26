@@ -8,6 +8,10 @@ For example, **Date = 11/28** and **Time = Morning** can have a limit of 30, whi
 
 Quota is stored per form. One form has one quota group.
 
+The quota is configured on the form's **Settings → Quota** screen. Select the fields, choose how each combination is counted, then set a limit and full message for every combination.
+
+![Quota settings for a date and time form. Each date and time combination has its own limit. A blank limit is unlimited and 0 means full.](docs/quota-settings.png)
+
 ## Requirements
 
 - WordPress 6.0 or newer
