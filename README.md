@@ -1,5 +1,7 @@
 # Gravity Forms Event Quota
 
+Author: [James](http://www.solutionforest.net)
+
 Limit a Gravity Forms form by the combination of choices a person selects. Each combination has its own limit. When a choice would go over that limit, only that choice is disabled and a full message is added to its label. The other choices stay available.
 
 For example, **Date = 11/28** and **Time = Morning** can have a limit of 30, while **Date = 11/28** and **Time = Afternoon** can have a limit of 20.

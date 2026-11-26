@@ -1,8 +1,11 @@
 <?php
 /**
  * Plugin Name: Gravity Forms Event Quota
+ * Plugin URI: http://www.solutionforest.net
  * Description: Limits Gravity Forms choices by field-combination quotas. Full options are disabled and labelled on the form.
  * Version: 1.0.2
+ * Author: James
+ * Author URI: http://www.solutionforest.net
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Text Domain: gf-event-quota
