@@ -1,0 +1,28 @@
+.gfeq-note {
+	margin: 0 0 12px;
+}
+
+.gfeq-note-warning {
+	color: #8a2424;
+}
+
+.gfeq-rules {
+	max-width: 920px;
+	border-collapse: collapse;
+}
+
+.gfeq-rules th,
+.gfeq-rules td {
+	padding: 8px 10px;
+	vertical-align: middle;
+}
+
+.gfeq-rules input[type="number"],
+.gfeq-rules input[type="text"] {
+	width: 100%;
+	max-width: 180px;
+}
+
+.gfeq-rules td:first-child {
+	min-width: 280px;
+}

@@ -1,0 +1,18 @@
+# Local Docker environment
+/docker/
+/docker-compose.yml
+/docker-compose.yaml
+
+# Local WordPress install
+/wordpress/
+/wp-admin/
+/wp-includes/
+/wp-content/
+/wp-*.php
+/xmlrpc.php
+/index.php
+/license.txt
+/readme.html
+/.htaccess
+
+.DS_Store
