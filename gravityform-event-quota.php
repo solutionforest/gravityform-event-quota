@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Gravity Forms Event Quota
- * Plugin URI: http://www.solutionforest.net
+ * Plugin Name: Event Quota for Gravity Forms
+ * Plugin URI: https://github.com/solutionforest/gravityform-event-quota
  * Description: Limits Gravity Forms choices by field-combination quotas. Full options are disabled and labelled on the form.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: James
  * Author URI: http://www.solutionforest.net
  * Requires at least: 6.0
@@ -17,10 +17,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'GFEQ_VERSION', '1.0.2' );
+define( 'GFEQ_VERSION', '1.0.3' );
 define( 'GFEQ_FILE', __FILE__ );
 define( 'GFEQ_PATH', plugin_dir_path( __FILE__ ) );
 define( 'GFEQ_URL', plugin_dir_url( __FILE__ ) );
+
+gfeq_register_update_checker();
 
 add_action( 'gform_loaded', 'gfeq_load', 5 );
 add_action( 'admin_notices', 'gfeq_missing_gravity_forms_notice' );
@@ -49,5 +51,24 @@ function gfeq_missing_gravity_forms_notice() {
 		return;
 	}
 
-	echo '<div class="notice notice-error"><p>Gravity Forms Event Quota requires Gravity Forms to be installed and activated.</p></div>';
+	echo '<div class="notice notice-error"><p>Event Quota for Gravity Forms requires Gravity Forms to be installed and activated.</p></div>';
+}
+
+/**
+ * Checks GitHub releases and offers updates on the Plugins screen.
+ */
+function gfeq_register_update_checker() {
+	$library = GFEQ_PATH . 'vendor/yahnis-elsts/plugin-update-checker/plugin-update-checker.php';
+	if ( ! is_readable( $library ) ) {
+		return;
+	}
+
+	require $library;
+
+	$updates = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+		'https://github.com/solutionforest/gravityform-event-quota/',
+		GFEQ_FILE,
+		'gravityform-event-quota'
+	);
+	$updates->getVcsApi()->enableReleaseAssets( '/^event-quota-for-gravity-forms-.+\.zip$/' );
 }

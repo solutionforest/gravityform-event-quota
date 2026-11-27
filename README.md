@@ -1,6 +1,8 @@
-# Gravity Forms Event Quota
+# Event Quota for Gravity Forms
 
 Author: [James](http://www.solutionforest.net)
+
+Plugin: https://github.com/solutionforest/gravityform-event-quota
 
 Limit a Gravity Forms form by the combination of choices a person selects. Each combination has its own limit. When a choice would go over that limit, only that choice is disabled and a full message is added to its label. The other choices stay available.
 

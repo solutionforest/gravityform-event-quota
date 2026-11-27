@@ -16,7 +16,7 @@ class GF_Event_Quota extends GFAddOn {
 	protected $_slug                     = 'gf-event-quota';
 	protected $_path                     = 'gravityform-event-quota/gravityform-event-quota.php';
 	protected $_full_path                = GFEQ_FILE;
-	protected $_title                    = 'Event Quota';
+	protected $_title                    = 'Event Quota for Gravity Forms';
 	protected $_short_title              = 'Quota';
 	protected $_capabilities_form_settings = 'gravityforms_edit_forms';
 
@@ -233,7 +233,7 @@ class GF_Event_Quota extends GFAddOn {
 
 		return array(
 			array(
-				'title'       => 'Event Quota',
+				'title'       => 'Event Quota for Gravity Forms',
 				'description' => 'Build a quota from the choices of several fields. For example, Date = 11/28 and Time = Morning. The form checks the quota whenever those choices change. A full choice is disabled and its label gets the full message. Only Active entries count. Unpaid Pending payments keep a seat. Trash, Spam, failed, refunded, and cancelled payments do not.',
 				'fields'      => array(
 					array(

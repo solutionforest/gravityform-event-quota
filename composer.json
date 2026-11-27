@@ -1,0 +1,8 @@
+{
+    "name": "solutionforest/gravityform-event-quota",
+    "description": "Event Quota for Gravity Forms",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "yahnis-elsts/plugin-update-checker": "^5.6"
+    }
+}

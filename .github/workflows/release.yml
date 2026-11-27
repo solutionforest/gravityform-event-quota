@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build plugin zip
+        run: |
+          set -euo pipefail
+          version="${GITHUB_REF_NAME#v}"
+          slug="gravityform-event-quota"
+          stage="dist/${slug}"
+          mkdir -p "${stage}"
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude 'dist' \
+            --exclude 'docker' \
+            --exclude 'docker-compose.yml' \
+            --exclude 'docker-compose.yaml' \
+            --exclude 'tests' \
+            --exclude '.DS_Store' \
+            ./ "${stage}/"
+          (
+            cd dist
+            zip -r "../event-quota-for-gravity-forms-${version}.zip" "${slug}"
+          )
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: event-quota-for-gravity-forms-*.zip
+          generate_release_notes: true
+          fail_on_unmatched_files: true
