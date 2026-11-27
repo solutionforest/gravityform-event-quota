@@ -4,6 +4,8 @@ Author: [James](http://www.solutionforest.net)
 
 Plugin: https://github.com/solutionforest/gravityform-event-quota
 
+Changes: [CHANGELOG.md](CHANGELOG.md)
+
 Limit a Gravity Forms form by the combination of choices a person selects. Each combination has its own limit. When a choice would go over that limit, only that choice is disabled and a full message is added to its label. The other choices stay available.
 
 For example, **Date = 11/28** and **Time = Morning** can have a limit of 30, while **Date = 11/28** and **Time = Afternoon** can have a limit of 20.
@@ -13,6 +15,12 @@ Quota is stored per form. One form has one quota group.
 The quota is configured on the form's **Settings → Quota** screen. Select the fields, choose how each combination is counted, then set a limit and full message for every combination.
 
 ![Quota settings for a date and time form. Each date and time combination has its own limit. A blank limit is unlimited and 0 means full.](docs/quota-settings.png)
+
+## Install
+
+Download `event-quota-for-gravity-forms-x.y.z.zip` from the [GitHub releases](https://github.com/solutionforest/gravityform-event-quota/releases) and upload it in WordPress. The folder inside that zip is `gravityform-event-quota`.
+
+Do not install the **Source code (zip)** link at the bottom of a release. That archive unpacks to `gravityform-event-quota-x.y.z`, and WordPress treats the versioned folder as a different plugin.
 
 ## Requirements
 

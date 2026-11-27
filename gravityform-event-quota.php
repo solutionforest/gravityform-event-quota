@@ -3,7 +3,7 @@
  * Plugin Name: Event Quota for Gravity Forms
  * Plugin URI: https://github.com/solutionforest/gravityform-event-quota
  * Description: Limits Gravity Forms choices by field-combination quotas. Full options are disabled and labelled on the form.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: James
  * Author URI: http://www.solutionforest.net
  * Requires at least: 6.0
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'GFEQ_VERSION', '1.0.3' );
+define( 'GFEQ_VERSION', '1.0.4' );
 define( 'GFEQ_FILE', __FILE__ );
 define( 'GFEQ_PATH', plugin_dir_path( __FILE__ ) );
 define( 'GFEQ_URL', plugin_dir_url( __FILE__ ) );

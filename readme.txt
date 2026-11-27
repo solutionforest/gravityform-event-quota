@@ -2,7 +2,7 @@
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 
 Limit Gravity Forms choices by field combination. A full choice is disabled and the full message is appended to its label.
